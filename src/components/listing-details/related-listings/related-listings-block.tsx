@@ -1,7 +1,6 @@
 'use client';
-
-import { topBoats } from 'public/data/top-boats';
-import ListingCard from '@/components/ui/cards/listing';
+import { topnewBoats } from 'public/data/top-boats-new';
+import ListingCardNew from '@/components/ui/cards/listing-new';
 import SeeMore from '@/components/ui/see-more';
 import Section from '@/components/ui/section';
 
@@ -15,8 +14,8 @@ export default function RelatedListingBlock() {
       rightElement={<SeeMore className="hidden md:block" />}
     >
       <div className="grid grid-cols-1 gap-x-5 gap-y-8 pt-7 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 3xl:gap-y-10">
-        {topBoats.slice(5, 9).map((item, index) => (
-          <ListingCard
+        {topnewBoats.slice(5, 9).map((item, index) => (
+          <ListingCardNew
             id={`related-listing-${index}`}
             key={`related-listing-${index}`}
             slides={item.thumbnail}
